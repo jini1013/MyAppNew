@@ -138,3 +138,76 @@ Fast-forward
 
 MongTa@DESKTOP-7FU88SS MINGW64 /d/MYGIT/MyApp-Ryan (master)
 $
+#----------------
+remote reposigory의 collaborator 추가
+github remove repository 의 setting메츄 -> manage asscss -> add prople로 해얃 user name이나 email로 검색
+
+#-----
+
+vscode sptm merge conflict
+
+Bit bash 명경으로 branch 생성, ㅡㄷㄱㅎㄷgkrk
+branch확인
+로컬 brahch확인
+--> git branch -v
+
+원격 brahch확인
+git branch -r
+
+로컬 원격 branch 확인
+git branch -a
+
+branch 생성
+$ git branch -v
+  feat/love      3ed42a1 좋아료
+  feat/main-page 05369b7 추가1
+  feat/test      05369b7 [behind 2] 추가1
+* master         cd3ac8d test3
+
+MongTa@DESKTOP-7FU88SS MINGW64 /d/MYGIT/MyApp-Ryan (master)
+$ git branch -r
+  origin/feat/love
+  origin/feat/main-page
+  origin/feat/test
+  origin/master
+
+MongTa@DESKTOP-7FU88SS MINGW64 /d/MYGIT/MyApp-Ryan (master)
+$ git branch -a
+  feat/love
+  feat/main-page
+  feat/test
+* master
+  remotes/origin/feat/love
+  remotes/origin/feat/main-page
+  remotes/origin/feat/test
+  remotes/origin/master
+
+MongTa@DESKTOP-7FU88SS MINGW64 /d/MYGIT/MyApp-Ryan (master)
+$
+
+
+#----
+branch 생성
+    git branch feat/mongta
+
+생성한 branch로 이동
+    git checkout feat/mongta
+
+생성한 branch에 push
+    git push origin feat/mongta
+
+master brahch로 이동
+    git checkout master
+
+master와 feat/mongta branch 병합하기
+    master brahch로 이동(checkout)
+        gir merge feat.mongta
+
+master branch push하기
+    git push origin master
+
+local braanch 삭제하기
+    git branch -d feat/mongta
+
+원격 braanch 삭제하기
+    git branch origin -delete feat/mongta
