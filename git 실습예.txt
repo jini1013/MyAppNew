@@ -1,0 +1,140 @@
+
+MongTa@DESKTOP-7FU88SS MINGW64 /d/MYGIT/MyApp-Ryan (master)
+$ pwd
+/d/MYGIT/MyApp-Ryan
+
+MongTa@DESKTOP-7FU88SS MINGW64 /d/MYGIT/MyApp-Ryan (master)
+
+##-----------------------------------
+$ git init
+Reinitialized existing Git repository in D:/MYGIT/MyApp-Ryan/.git/
+
+MongTa@DESKTOP-7FU88SS MINGW64 /d/MYGIT/MyApp-Ryan (master)
+
+##-----------------------------------
+$ ls -la
+total 5
+drwxr-xr-x 1 MongTa 197121  0 10월 12 10:38 ./
+drwxr-xr-x 1 MongTa 197121  0 10월 12 10:27 ../
+drwxr-xr-x 1 MongTa 197121  0 10월 12 10:54 .git/
+-rw-r--r-- 1 MongTa 197121 52 10월 12 10:53 README.md
+
+MongTa@DESKTOP-7FU88SS MINGW64 /d/MYGIT/MyApp-Ryan (master)
+
+##-----------------------------------
+$ git add README.md
+
+MongTa@DESKTOP-7FU88SS MINGW64 /d/MYGIT/MyApp-Ryan (master)
+
+##-----------------------------------
+$ git commit -m "first commit"
+[master (root-commit) 631d60e] first commit
+ 1 file changed, 2 insertions(+)
+ create mode 100644 README.md
+
+MongTa@DESKTOP-7FU88SS MINGW64 /d/MYGIT/MyApp-Ryan (master)
+
+##-----------------------------------
+https://github.com sign in 후 + button click
+new repository 버튼 click
+Repository name입력 --> MyAppNew
+
+https://github.com/jini1013/MyAppNew에서 url copy
+
+$ git remote add origin https://github.com/jini1013/MyAppNew.git
+
+MongTa@DESKTOP-7FU88SS MINGW64 /d/MYGIT/MyApp-Ryan (master)
+
+$ git push origin master
+info: please complete authentication in your browser...
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 259 bytes | 129.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/jini1013/MyAppNew.git
+ * [new branch]      master -> master
+
+MongTa@DESKTOP-7FU88SS MINGW64 /d/MYGIT/MyApp-Ryan (master)
+$ git config --list
+diff.astextplain.textconv=astextplain
+filter.lfs.clean=git-lfs clean -- %f
+filter.lfs.smudge=git-lfs smudge -- %f
+filter.lfs.process=git-lfs filter-process
+filter.lfs.required=true
+http.sslbackend=openssl
+http.sslcainfo=C:/Program Files/Git/mingw64/ssl/certs/ca-bundle.crt        
+core.autocrlf=true
+core.fscache=true
+core.symlinks=true
+pull.rebase=false
+credential.helper=manager-core
+:
+
+exit
+원격 저장소 제거
+gir remote rm orign
+git config --global --unset user.name
+git config --global --unset user.email
+
+git config 목록확인
+git config --list
+
+commit확인
+git log
+git log --oneline
+
+
+#---------------
+$ git clone https://github.com/jini1013/MyAppNew .
+Cloning into '.'...
+remote: Enumerating objects: 3, done.
+remote: Counting objects: 100% (3/3), done.
+remote: Compressing objects: 100% (2/2), done.
+remote: Total 3 (delta 0), reused 3 (delta 0), pack-reused 0
+Receiving objects: 100% (3/3), done.
+
+
+#------- myapp-apeach에서 app.js 추가 
+$ git add app.js
+
+MongTa@DESKTOP-7FU88SS MINGW64 /d/MYGIT/MyApp-Apeach (master)
+$ git commit -m "app.js 추가"
+[master 339583d] app.js 추가
+ 1 file changed, 1 insertion(+)
+ create mode 100644 app.js
+
+MongTa@DESKTOP-7FU88SS MINGW64 /d/MYGIT/MyApp-Apeach (master)
+$ git push origin master
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 297 bytes | 148.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/jini1013/MyAppNew
+   631d60e..339583d  master -> master
+
+MongTa@DESKTOP-7FU88SS MINGW64 /d/MYGIT/MyApp-Apeach (master)
+$
+
+#-----------------------------------
+apeach에서 push한 app.js를 ryan에 반영하기 위해 pull
+$ git pull origin master
+remote: Enumerating objects: 4, done.
+remote: Counting objects: 100% (4/4), done.
+remote: Compressing objects: 100% (2/2), done.
+remote: Total 3 (delta 0), reused 3 (delta 0), pack-reused 0
+Unpacking objects: 100% (3/3), 277 bytes | 0 bytes/s, done.
+From https://github.com/jini1013/MyAppNew
+ * branch            master     -> FETCH_HEAD
+   631d60e..339583d  master     -> origin/master
+Updating 631d60e..339583d
+Fast-forward
+ app.js | 1 +
+ 1 file changed, 1 insertion(+)
+ create mode 100644 app.js
+
+MongTa@DESKTOP-7FU88SS MINGW64 /d/MYGIT/MyApp-Ryan (master)
+$
