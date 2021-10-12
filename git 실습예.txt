@@ -201,7 +201,7 @@ master brahch로 이동
 
 master와 feat/mongta branch 병합하기
     master brahch로 이동(checkout)
-        gir merge feat.mongta
+        git merge feat.mongta
 
 master branch push하기
     git push origin master
@@ -211,3 +211,118 @@ local braanch 삭제하기
 
 원격 braanch 삭제하기
     git branch origin -delete feat/mongta
+
+
+#--------------------------
+$ git brahch -v
+git: 'brahch' is not a git command. See 'git --help'.
+
+The most similar command is
+        branch
+
+MongTa@DESKTOP-7FU88SS MINGW64 /d/MYGIT/MyApp-Ryan (master)
+$
+
+MongTa@DESKTOP-7FU88SS MINGW64 /d/MYGIT/MyApp-Ryan (master)
+$ git brahch -r
+git: 'brahch' is not a git command. See 'git --help'.
+
+The most similar command is
+        branch
+
+MongTa@DESKTOP-7FU88SS MINGW64 /d/MYGIT/MyApp-Ryan (master)
+$ git brahch -v
+git: 'brahch' is not a git command. See 'git --help'.
+
+The most similar command is
+        branch
+
+MongTa@DESKTOP-7FU88SS MINGW64 /d/MYGIT/MyApp-Ryan (master)
+$ git branch -f
+  feat/love
+  feat/main-page
+  feat/test
+* master
+
+MongTa@DESKTOP-7FU88SS MINGW64 /d/MYGIT/MyApp-Ryan (master)
+$ git branch -f
+  feat/love
+  feat/main-page
+  feat/test
+* master
+
+MongTa@DESKTOP-7FU88SS MINGW64 /d/MYGIT/MyApp-Ryan (master)
+$ git branch -v
+  feat/love      3ed42a1 좋아료
+  feat/main-page 05369b7 추가1
+  feat/test      05369b7 [behind 2] 추가1
+* master         cd3ac8d test3
+
+MongTa@DESKTOP-7FU88SS MINGW64 /d/MYGIT/MyApp-Ryan (master)
+$ git branch -r
+  origin/feat/love
+  origin/feat/main-page
+  origin/feat/test
+  origin/master
+
+MongTa@DESKTOP-7FU88SS MINGW64 /d/MYGIT/MyApp-Ryan (master)
+$ git branch -a
+  feat/love
+  feat/main-page
+  feat/test
+* master
+  remotes/origin/feat/love
+  remotes/origin/feat/main-page
+  remotes/origin/feat/test
+  remotes/origin/master
+
+MongTa@DESKTOP-7FU88SS MINGW64 /d/MYGIT/MyApp-Ryan (master)
+$ git branch -a
+  feat/love
+  feat/main-page
+  feat/test
+* master
+  remotes/origin/feat/love
+  remotes/origin/feat/main-page
+  remotes/origin/feat/test
+  remotes/origin/master
+
+MongTa@DESKTOP-7FU88SS MINGW64 /d/MYGIT/MyApp-Ryan (master)
+$ git branch feat/mongta
+
+MongTa@DESKTOP-7FU88SS MINGW64 /d/MYGIT/MyApp-Ryan (master|REBASE 1/1)     
+$ git checkout feat/mongta
+error: you need to resolve your current index first
+README.md: needs merge
+
+MongTa@DESKTOP-7FU88SS MINGW64 /d/MYGIT/MyApp-Ryan (master|REBASE 1/1)     
+$ gid add .
+bash: gid: command not found
+
+MongTa@DESKTOP-7FU88SS MINGW64 /d/MYGIT/MyApp-Ryan (master|REBASE 1/1)     
+$ git add .
+
+MongTa@DESKTOP-7FU88SS MINGW64 /d/MYGIT/MyApp-Ryan (master|REBASE 1/1)     
+$ git commit -m "dom code 추가"
+[detached HEAD dce5bc2] dom code 추가
+ 2 files changed, 79 insertions(+), 2 deletions(-)
+
+MongTa@DESKTOP-7FU88SS MINGW64 /d/MYGIT/MyApp-Ryan (master|REBASE 1/1)     
+$ got log --oneline
+bash: got: command not found
+
+MongTa@DESKTOP-7FU88SS MINGW64 /d/MYGIT/MyApp-Ryan (master|REBASE 1/1)     
+$ git log --oneline
+dce5bc2 (HEAD) dom code 추가
+3ed42a1 (origin/feat/love, feat/mongta, feat/love) 좋아료
+cd3ac8d (origin/feat/test) test3
+60f26dd test2
+05369b7 (origin/feat/main-page, feat/test, feat/main-page) 추가1
+c158504 body 변경
+f47818b gitignore add
+1c89e54 index.html 추가
+339583d app.js 추가
+631d60e first commit
+
+MongTa@DESKTOP-7FU88SS MINGW64 /d/MYGIT/MyApp-Ryan (master|REBASE 1/1)     
+$
